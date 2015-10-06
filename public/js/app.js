@@ -4,7 +4,7 @@ app.config(function($routeProvider){
 	
 	$routeProvider.when('/', {
 		controller: 'twitterController',
-		templateUrl: 'timeline.html'
+		templateUrl: 'views/timeline.html'
 	})
 
 });
