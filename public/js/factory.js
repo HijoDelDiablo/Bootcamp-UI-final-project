@@ -1,16 +1,19 @@
 app.factory('twitterFactory', ['$http', function ($http){
 	
-	var goHome = function(response){
+	var goHome = function(cback){
 		$http({
 			method: 'get',
-			url: "http://localhost:3000/timeline?count=100"
-		}).then(function successCallback(response){
-			response(response);
+			url: "http://localhost:3000/timeline?count=40"
+		}).then(function (response){
+			cback(response);
 			console.log("it works");
-		}, function errorCallback(response){
+			console.log(response);
+		}, function (response){
 			console.log("it doesn't work");
 		});
 	}
 
-	return goHome;
+	return {
+		goHome: goHome
+	};
 }]);

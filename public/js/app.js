@@ -7,4 +7,8 @@ app.config(function($routeProvider){
 		templateUrl: 'views/timeline.html'
 	})
 
+	.otherwise({
+      redirectTo: '/'
+    });
+
 });
