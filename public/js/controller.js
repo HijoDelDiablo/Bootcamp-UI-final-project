@@ -1,6 +1,6 @@
-app.controller('twitterController',['$scope', function ($scope){
+app.controller('twitterController',['$scope', 'twitterFactory',function ($scope, twitterFactory){
 	/*$scope.title = "Holi";*/
-	twitterController.goHome(function (response){
+	twitterFactory.goHome(function (response){
 		$scope.twts = response.data;
 
 	});

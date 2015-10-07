@@ -12,5 +12,5 @@ app.factory('twitterFactory', ['$http', function ($http){
 		});
 	}
 
-	return twitterFactory;
+	return goHome;
 }]);
