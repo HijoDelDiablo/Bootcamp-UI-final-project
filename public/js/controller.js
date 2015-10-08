@@ -22,6 +22,8 @@ app.controller('twitterController',['$scope', 'twitterFactory', '$http',function
 			return tweets;
 		};
 		twitterFactory.goHome(getTweets);
+
+		$scope.tweets = 'tweets';
 		
 
 	/*var call = function(b) {
