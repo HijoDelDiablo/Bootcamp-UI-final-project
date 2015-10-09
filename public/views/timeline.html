@@ -1,3 +1,7 @@
 <div ng-repeat="tweet in tweets">
-	<p class="twts">{{ tweets }}</p>
+
+	<p>{{ tweet.user.screen_name }}</p>
+	<p>{{ tweet.text}}</p>
+	<p>{{ tweet.created_at }}</p>
+
 </div>

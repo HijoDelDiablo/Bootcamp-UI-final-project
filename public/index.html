@@ -11,7 +11,26 @@
 </head>
 <body>
 	<div>
-		<button ng-click="tweets">Home</button>
+		<h1>Twitter Timeline</h1>
+		<button onclick="getLocation()">Where Am I?</button>
+
+		<p id="demo"></p>
+
+		<script>
+		var geo = document.getElementById("demo");
+
+		function getLocation() {
+    		if (navigator.geolocation) {
+        		navigator.geolocation.watchPosition(showPosition);
+    		} else { 
+        		geo.innerHTML = "Geolocation is not supported by this browser.";}
+    		}
+    
+		function showPosition(position) {
+    		geo.innerHTML="Latitude: " + position.coords.latitude + 
+    		"<br>Longitude: " + position.coords.longitude;	
+		}
+		</script>
 	</div>
 	<div ng-view>
 
